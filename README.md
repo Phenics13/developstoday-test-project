@@ -1,27 +1,49 @@
-# DevelopstodayTestProject
+# Countries test project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+Project stack:
 
-## Development server
+- Angular 18
+- NgRx (store, effects, dev-tools)
+- Angular Material
+- PrimeNG, PrimeFlex, PrimeIcons
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How to build
 
-## Code scaffolding
+```
+git clone https://github.com/Phenics13/developstoday-test-project
+cd developstoday-test-project/
+npm install
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Overview
 
-## Build
+### Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Project has `home` and `country` pages.
 
-## Running unit tests
+#### Home page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Home page consists of sidebar and list of countries.
 
-## Running end-to-end tests
+Sidebar has 3 widgets with 3 random countries that display next holiday in the country. This widgets choose another random countries with `setInterval` every 10 seconds.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+List of countries has cards that consist of country's name. Input is used to filter the list of countries with name parameter. Filter input uses `debounceTime(300)` to prevent multiple re-rendering at one time.
 
-## Further help
+Click on country card navigates user to the `country` page. This page displays all holidays of the country in the selected year (default year is current). The year parameter could be from 2020 to 2030.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Overall, all asynchronous actions displayed in the view as `loading-spinner` from `Angular Material` library to enhance UX.
+
+### Folder structure
+
+- components - basic ui elements
+- models - interfaces related to entities on backend
+- reducers - state management
+- routes - pages of the website
+- services - services for http requests logic
+
+## Useful information
+
+For `.env` file were installed `@ngx-env/builder` library
+
+Project checked with `linter` and formatted with `prettier`
