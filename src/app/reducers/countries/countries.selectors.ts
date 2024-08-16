@@ -1,40 +1,41 @@
-import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { CountriesState } from "../../models/country.model";
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { CountriesState } from '../../models/country.model';
 
-export const selectCountryState = createFeatureSelector<CountriesState>('countries');
+export const selectCountryState =
+  createFeatureSelector<CountriesState>('countries');
 export const selectCountries = createSelector(
   selectCountryState,
-  (state) => state.countries
+  state => state.countries
 );
 export const selectCountryInfo = createSelector(
   selectCountryState,
-  (state) => state.selectedCountry
+  state => state.selectedCountry
 );
 export const selectCountriesLoading = createSelector(
   selectCountryState,
-  (state) => state.loadingCountries
+  state => state.loadingCountries
 );
 export const selectCountryInfoLoading = createSelector(
   selectCountryState,
-  (state) => state.loadingCountryInfo
+  state => state.loadingCountryInfo
 );
 export const selectCountriesError = createSelector(
   selectCountryState,
-  (state) => state.error
+  state => state.error
 );
 export const selectCountryHolidays = createSelector(
   selectCountryState,
-  (state) => state.selectedCountryHolidays
+  state => state.selectedCountryHolidays
 );
 export const selectCountryHolidaysLoading = createSelector(
   selectCountryState,
-  (state) => state.loadingCountryHolidays
+  state => state.loadingCountryHolidays
 );
 export const selectCountriesNextHolidays = createSelector(
   selectCountryState,
-  (state) => state.randomCountriesHolidays
+  state => state.randomCountriesHolidays
 );
 export const selectCountriesNextHolidaysLoading = createSelector(
   selectCountryState,
-  (state) => state.loadingRandomCountriesHolidays
+  state => state.loadingRandomCountriesHolidays
 );

@@ -1,13 +1,16 @@
 <h2 class="gradient-text">Countries' holidays</h2>
 @if (isCountriesNextHolidaysLoading$ | async) {
-<app-loading-spinner></app-loading-spinner>
-} @else { @if (countriesNextHolidays$ | async; as countriesNextHolidays) {
-<div class="flex flex-column gap-4">
-  @for(countryNextHoliday of countriesNextHolidays; track
-  countryNextHoliday.country.countryCode) {
-  <app-country-holiday-card
-    [countryNextHoliday]="countryNextHoliday"
-  ></app-country-holiday-card>
+  <app-loading-spinner></app-loading-spinner>
+} @else {
+  @if (countriesNextHolidays$ | async; as countriesNextHolidays) {
+    <div class="flex flex-column gap-4">
+      @for (
+        countryNextHoliday of countriesNextHolidays;
+        track countryNextHoliday.country.countryCode
+      ) {
+        <app-country-holiday-card
+          [countryNextHoliday]="countryNextHoliday"></app-country-holiday-card>
+      }
+    </div>
   }
-</div>
-} }
+}

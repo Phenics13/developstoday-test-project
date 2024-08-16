@@ -4,14 +4,12 @@
     icon="pi pi-angle-left"
     [text]="true"
     (onClick)="onPreviousYear()"
-    [disabled]="year === minYear"
-  />
+    [disabled]="year === minYear" />
   <span class="gradient-text">{{ year }}</span>
   <p-button
     severity="secondary"
     icon="pi pi-angle-right"
     [text]="true"
     (onClick)="onNextYear()"
-    [disabled]="year === maxYear"
-  />
+    [disabled]="year === maxYear" />
 </div>

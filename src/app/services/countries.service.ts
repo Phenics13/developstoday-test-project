@@ -42,8 +42,8 @@ export class CountriesService {
       randomCountries.add(countries[randomIndex].countryCode);
     }
     return Array.from(randomCountries).map(
-      (countryCode) =>
-        countries.find((country) => country.countryCode === countryCode)!
+      countryCode =>
+        countries.find(country => country.countryCode === countryCode)!
     );
   }
 
@@ -51,9 +51,9 @@ export class CountriesService {
     countries: Country[]
   ): Observable<CountryNextHoliday[]> {
     return forkJoin(
-      countries.map((country) =>
+      countries.map(country =>
         this.getNextCountryHolidays(country.countryCode).pipe(
-          map((holidays) => ({
+          map(holidays => ({
             country: country,
             holiday: holidays[0],
           }))

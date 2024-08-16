@@ -1,13 +1,12 @@
 @if (!country) {
-<mat-card appearance="outlined" class="sufrace-500">
-  <mat-card-content class="m-auto">Error loading country</mat-card-content>
-</mat-card>
+  <mat-card appearance="outlined" class="sufrace-500">
+    <mat-card-content class="m-auto">Error loading country</mat-card-content>
+  </mat-card>
 } @else {
-<mat-card
-  appearance="outlined"
-  class="hover:shadow-3 cursor-pointer"
-  routerLink="./{{ country.countryCode }}"
->
-  <mat-card-content class="m-auto">{{ country.name }}</mat-card-content>
-</mat-card>
+  <mat-card
+    appearance="outlined"
+    class="hover:shadow-3 cursor-pointer"
+    routerLink="./{{ country.countryCode }}">
+    <mat-card-content class="m-auto">{{ country.name }}</mat-card-content>
+  </mat-card>
 }

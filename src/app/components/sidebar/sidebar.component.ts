@@ -42,8 +42,8 @@ export class SidebarComponent implements OnDestroy {
     );
 
     this.countriesSub = this.countries$
-      .pipe(filter((countries) => countries.length > 0))
-      .subscribe((countries) => {
+      .pipe(filter(countries => countries.length > 0))
+      .subscribe(countries => {
         this.loadRandomCountriesNextHolidays(countries);
 
         if (this.randomCountriesNextHolidaysInterval)

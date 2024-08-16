@@ -27,8 +27,8 @@ export class CountriesEffects {
       ofType(loadCountries),
       switchMap(() =>
         this.countriesService.getCountries().pipe(
-          map((countries) => loadCountriesSuccess({ countries })),
-          catchError((error) => of(loadCountriesFailure({ error })))
+          map(countries => loadCountriesSuccess({ countries })),
+          catchError(error => of(loadCountriesFailure({ error })))
         )
       )
     )
@@ -40,8 +40,8 @@ export class CountriesEffects {
       switchMap(({ countryCode }) =>
         this.countriesService.getCountryInfo(countryCode).pipe(
           delay(300),
-          map((countryInfo) => selectCountrySuccess({ countryInfo })),
-          catchError((error) => of(selectCountryFailure({ error })))
+          map(countryInfo => selectCountrySuccess({ countryInfo })),
+          catchError(error => of(selectCountryFailure({ error })))
         )
       )
     )
@@ -52,8 +52,8 @@ export class CountriesEffects {
       ofType(loadCountryHolidays),
       switchMap(({ countryCode, year }) =>
         this.countriesService.getCountryHolidays(countryCode, year).pipe(
-          map((holidays) => loadCountryHolidaysSuccess({ holidays })),
-          catchError((error) => of(loadCountryHolidaysFailure({ error })))
+          map(holidays => loadCountryHolidaysSuccess({ holidays })),
+          catchError(error => of(loadCountryHolidaysFailure({ error })))
         )
       )
     )
@@ -64,12 +64,12 @@ export class CountriesEffects {
       ofType(loadNextCountriesHolidays),
       switchMap(({ countries }) =>
         this.countriesService.getRandomCountriesHolidays(countries).pipe(
-          map((countriesNextHolidays) =>
+          map(countriesNextHolidays =>
             loadNextCountriesHolidaysSuccess({
               countriesNextHoliday: countriesNextHolidays,
             })
           ),
-          catchError((error) => of(loadNextCountriesHolidaysFailure({ error })))
+          catchError(error => of(loadNextCountriesHolidaysFailure({ error })))
         )
       )
     )

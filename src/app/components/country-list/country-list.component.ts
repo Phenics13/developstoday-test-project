@@ -50,7 +50,7 @@ export class CountryListComponent implements OnInit {
       this.countries$,
       this.nameChangeSubject.pipe(
         startWith(''),
-        connect((value) =>
+        connect(value =>
           concat(value.pipe(take(1)), value.pipe(debounceTime(300)))
         )
       ),
@@ -58,7 +58,7 @@ export class CountryListComponent implements OnInit {
       map(([countries, name]) => {
         if (!name) return countries;
 
-        return countries.filter((country) =>
+        return countries.filter(country =>
           country.name.toLowerCase().includes(name.toLowerCase())
         );
       })

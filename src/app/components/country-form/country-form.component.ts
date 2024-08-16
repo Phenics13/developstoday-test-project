@@ -23,7 +23,7 @@ export class CountryFormComponent implements OnDestroy {
   nameControlSub: Subscription;
 
   constructor() {
-    this.nameControlSub = this.nameControl.valueChanges.subscribe((value) =>
+    this.nameControlSub = this.nameControl.valueChanges.subscribe(value =>
       this.nameChange.emit(value ?? '')
     );
   }

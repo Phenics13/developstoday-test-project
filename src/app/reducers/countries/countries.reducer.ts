@@ -29,7 +29,7 @@ export const initialState: CountriesState = {
 
 export const countriesReducer = createReducer(
   initialState,
-  on(loadCountries, (state) => ({
+  on(loadCountries, state => ({
     ...state,
     loadingCountries: true,
     error: null,
@@ -44,7 +44,7 @@ export const countriesReducer = createReducer(
     loadingCountries: false,
     error,
   })),
-  on(selectCountry, (state) => ({
+  on(selectCountry, state => ({
     ...state,
     loadingCountryInfo: true,
     error: null,
@@ -59,7 +59,7 @@ export const countriesReducer = createReducer(
     loadingCountryInfo: false,
     error,
   })),
-  on(loadCountryHolidays, (state) => ({
+  on(loadCountryHolidays, state => ({
     ...state,
     loadingCountryHolidays: true,
     error: null,
@@ -74,7 +74,7 @@ export const countriesReducer = createReducer(
     loadingCountryHolidays: false,
     error,
   })),
-  on(loadNextCountriesHolidays, (state) => ({
+  on(loadNextCountriesHolidays, state => ({
     ...state,
     loadingRandomCountriesHolidays: true,
     error: null,
