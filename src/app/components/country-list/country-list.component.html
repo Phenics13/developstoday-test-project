@@ -1,0 +1,16 @@
+<h1 class="gradient-text">Countries</h1>
+<app-country-form (nameChange)="onCountryNameChange($event)"></app-country-form>
+@if (isCountriesLoading$ | async) {
+<app-loading-spinner></app-loading-spinner>
+} @else { @if (filteredCountries$ | async; as countries) { @if
+(countries.length) {
+<div class="grid w-12">
+  @for (country of countries; track country.countryCode) {
+  <div class="col-3">
+    <app-country-card [country]="country"></app-country-card>
+  </div>
+  }
+</div>
+} @else {
+<h3 class="text-center">No countries found</h3>
+} } }

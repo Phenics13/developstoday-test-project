@@ -3,6 +3,8 @@
 @import "primeng/resources/primeng.css";
 // PrimeIcons
 @import "primeicons/primeicons.css";
+// PrimeFlex
+@import "../node_modules/primeflex/primeflex.css";
 
 html,
 body {
@@ -11,4 +13,11 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.gradient-text {
+  background: linear-gradient(to right, #477bff 0%, #6376a5 55%, #ff452c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

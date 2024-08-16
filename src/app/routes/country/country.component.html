@@ -1,0 +1,17 @@
+<div class="flex flex-column justify-content-center align-items-center pt-3">
+  @if (isLoadingCountryInfo$ | async) {
+  <app-loading-spinner></app-loading-spinner>
+  } @else { @if (selectedCountry$ | async; as selectedCountry) {
+  <app-country-holidays
+    [countryInfo]="selectedCountry"
+    [selectedYear]="selectedYear"
+  ></app-country-holidays>
+  <app-year-selector
+    [(year)]="selectedYear"
+    [minYear]="2020"
+    [maxYear]="2030"
+  ></app-year-selector>
+  } @else {
+  <h3>No country selected</h3>
+  } }
+</div>

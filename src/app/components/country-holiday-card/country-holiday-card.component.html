@@ -1,0 +1,15 @@
+<mat-card [@fadeInFromTop] appearance="outlined">
+  <mat-card-header>
+    <b>
+      {{ countryNextHoliday?.country?.name }}
+    </b>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="flex align-items-center gap-2">
+      <p>{{ countryNextHoliday?.holiday?.name }}</p>
+      <p class="text-sm text-color-secondary min-w-max">
+        {{ countryNextHoliday?.holiday?.date }}
+      </p>
+    </div>
+  </mat-card-content>
+</mat-card>

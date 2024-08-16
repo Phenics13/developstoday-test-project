@@ -1,0 +1,17 @@
+<div class="flex gap-4 align-items-center py-3">
+  <p-button
+    severity="secondary"
+    icon="pi pi-angle-left"
+    [text]="true"
+    (onClick)="onPreviousYear()"
+    [disabled]="year === minYear"
+  />
+  <span class="gradient-text">{{ year }}</span>
+  <p-button
+    severity="secondary"
+    icon="pi pi-angle-right"
+    [text]="true"
+    (onClick)="onNextYear()"
+    [disabled]="year === maxYear"
+  />
+</div>
