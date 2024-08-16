@@ -30,9 +30,13 @@ Sidebar has 3 widgets with 3 random countries that display next holiday in the c
 
 List of countries has cards that consist of country's name. Input is used to filter the list of countries with name parameter. Filter input uses `debounceTime(300)` to prevent multiple re-rendering at one time.
 
+### Country page
+
 Click on country card navigates user to the `country` page. This page displays all holidays of the country in the selected year (default year is current). The year parameter could be from 2020 to 2030.
 
-Overall, all asynchronous actions displayed in the view as `loading-spinner` from `Angular Material` library to enhance UX.
+### Overall
+
+All asynchronous actions displayed in the view as `loading-spinner` from `Angular Material` library to enhance UX.
 
 ### Folder structure
 
