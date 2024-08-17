@@ -12,30 +12,8 @@ export const loadCountriesFailure = createAction(
   '[Countries] Load Countries Failure',
   props<{ error: Error }>()
 );
-export const selectCountry = createAction(
-  '[Countries] Select Country',
-  props<{ countryCode: string }>()
-);
-export const selectCountrySuccess = createAction(
-  '[Countries] Select Country Success',
-  props<{ countryInfo: CountryInfo }>()
-);
-export const selectCountryFailure = createAction(
-  '[Countries] Select Country Failure',
-  props<{ error: Error }>()
-);
-export const loadCountryHolidays = createAction(
-  '[Countries] Load Country Holidays',
-  props<{ countryCode: string; year: number }>()
-);
-export const loadCountryHolidaysSuccess = createAction(
-  '[Countries] Load Country Holidays Success',
-  props<{ holidays: Holiday[] }>()
-);
-export const loadCountryHolidaysFailure = createAction(
-  '[Countries] Load Country Holidays Failure',
-  props<{ error: Error }>()
-);
+
+// nextCountryHolidays
 export const loadNextCountriesHolidays = createAction(
   '[Countries] Load Next Country Holidays',
   props<{ countries: Country[] }>()

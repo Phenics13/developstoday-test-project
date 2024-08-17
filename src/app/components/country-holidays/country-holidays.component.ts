@@ -2,17 +2,15 @@ import { Component, inject, Input, OnChanges, OnInit } from '@angular/core';
 import { CountryInfo } from '../../models/country.model';
 import { Store } from '@ngrx/store';
 import { State } from '../../reducers';
-import { loadCountryHolidays } from '../../reducers/countries/countries.actions';
 
 import { Observable } from 'rxjs';
 import { Holiday } from '../../models/holiday.model';
-import {
-  selectCountryHolidays,
-  selectCountryHolidaysLoading,
-} from '../../reducers/countries/countries.selectors';
+
 import { CommonModule } from '@angular/common';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { CountryHolidaysTableComponent } from '../country-holidays-table/country-holidays-table.component';
+import { selectCountryHolidays, selectCountryHolidaysLoading } from '../../reducers/selectedCountry/selectedCountry.selectors';
+import { loadCountryHolidays } from '../../reducers/selectedCountry/selectedCountry.actions';
 
 @Component({
   selector: 'app-country-holidays',

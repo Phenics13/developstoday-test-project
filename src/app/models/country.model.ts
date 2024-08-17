@@ -16,12 +16,8 @@ export interface Country {
 
 export interface CountriesState {
   countries: Country[];
-  selectedCountry: CountryInfo | null;
-  selectedCountryHolidays: Holiday[];
   randomCountriesHolidays: CountryNextHoliday[];
   loadingCountries: boolean;
-  loadingCountryInfo: boolean;
-  loadingCountryHolidays: boolean;
   loadingRandomCountriesHolidays: boolean;
   error: Error | null;
 }

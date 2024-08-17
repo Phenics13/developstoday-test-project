@@ -3,16 +3,15 @@ import { Store } from '@ngrx/store';
 import { State } from '../../reducers';
 import { Observable } from 'rxjs';
 import { CountryInfo } from '../../models/country.model';
-import {
-  selectCountryInfo,
-  selectCountryInfoLoading,
-} from '../../reducers/countries/countries.selectors';
+
 import { LoadingSpinnerComponent } from '../../components/loading-spinner/loading-spinner.component';
 import { CommonModule } from '@angular/common';
 import { CountryHolidaysComponent } from '../../components/country-holidays/country-holidays.component';
 import { ActivatedRoute } from '@angular/router';
-import { selectCountry } from '../../reducers/countries/countries.actions';
+
 import { YearSelectorComponent } from '../../components/year-selector/year-selector.component';
+import { selectCountryInfo, selectCountryInfoLoading } from '../../reducers/selectedCountry/selectedCountry.selectors';
+import { selectCountry } from '../../reducers/selectedCountry/selectedCountry.actions';
 
 @Component({
   selector: 'app-country',
