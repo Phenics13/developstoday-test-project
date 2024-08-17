@@ -9,8 +9,13 @@ import { Holiday } from '../../models/holiday.model';
 import { CommonModule } from '@angular/common';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { CountryHolidaysTableComponent } from '../country-holidays-table/country-holidays-table.component';
-import { selectCountryHolidays, selectCountryHolidaysLoading } from '../../reducers/selectedCountry/selectedCountry.selectors';
+import {
+  selectCountryHolidays,
+  selectCountryHolidaysLoading,
+} from '../../reducers/selectedCountry/selectedCountry.selectors';
 import { loadCountryHolidays } from '../../reducers/selectedCountry/selectedCountry.actions';
+import { ButtonModule } from 'primeng/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-country-holidays',
@@ -19,6 +24,8 @@ import { loadCountryHolidays } from '../../reducers/selectedCountry/selectedCoun
     LoadingSpinnerComponent,
     CountryHolidaysTableComponent,
     CommonModule,
+    ButtonModule,
+    RouterLink
   ],
   templateUrl: './country-holidays.component.html',
   styleUrl: './country-holidays.component.scss',
