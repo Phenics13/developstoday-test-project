@@ -10,7 +10,10 @@ import { CountryHolidaysComponent } from '../../components/country-holidays/coun
 import { ActivatedRoute } from '@angular/router';
 
 import { YearSelectorComponent } from '../../components/year-selector/year-selector.component';
-import { selectCountryInfo, selectCountryInfoLoading } from '../../reducers/selectedCountry/selectedCountry.selectors';
+import {
+  selectCountryInfo,
+  selectCountryInfoLoading,
+} from '../../reducers/selectedCountry/selectedCountry.selectors';
 import { selectCountry } from '../../reducers/selectedCountry/selectedCountry.actions';
 
 @Component({

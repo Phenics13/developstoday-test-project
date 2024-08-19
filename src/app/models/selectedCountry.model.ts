@@ -1,5 +1,5 @@
-import { CountryInfo } from "./country.model";
-import { Holiday } from "./holiday.model";
+import { CountryInfo } from './country.model';
+import { Holiday } from './holiday.model';
 
 export interface SelectedCountryState {
   selectedCountry: CountryInfo | null;

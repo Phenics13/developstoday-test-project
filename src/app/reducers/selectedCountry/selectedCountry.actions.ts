@@ -1,6 +1,6 @@
-import { createAction, props } from "@ngrx/store";
-import { CountryInfo } from "../../models/country.model";
-import { Holiday } from "../../models/holiday.model";
+import { createAction, props } from '@ngrx/store';
+import { CountryInfo } from '../../models/country.model';
+import { Holiday } from '../../models/holiday.model';
 
 export const selectCountry = createAction(
   '[Countries] Select Country',

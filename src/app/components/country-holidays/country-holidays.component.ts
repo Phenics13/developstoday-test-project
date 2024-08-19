@@ -25,7 +25,7 @@ import { RouterLink } from '@angular/router';
     CountryHolidaysTableComponent,
     CommonModule,
     ButtonModule,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './country-holidays.component.html',
   styleUrl: './country-holidays.component.scss',

@@ -1,8 +1,15 @@
-import { inject, Injectable } from "@angular/core";
-import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { CountriesService } from "../../services/countries.service";
-import { catchError, delay, map, of, switchMap } from "rxjs";
-import { loadCountryHolidays, loadCountryHolidaysFailure, loadCountryHolidaysSuccess, selectCountry, selectCountryFailure, selectCountrySuccess } from "./selectedCountry.actions";
+import { inject, Injectable } from '@angular/core';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { CountriesService } from '../../services/countries.service';
+import { catchError, delay, map, of, switchMap } from 'rxjs';
+import {
+  loadCountryHolidays,
+  loadCountryHolidaysFailure,
+  loadCountryHolidaysSuccess,
+  selectCountry,
+  selectCountryFailure,
+  selectCountrySuccess,
+} from './selectedCountry.actions';
 
 @Injectable()
 export class SelectedCountryEffects {

@@ -1,5 +1,4 @@
 import { CountryNextHoliday } from './countryHoliday.model';
-import { Holiday } from './holiday.model';
 
 export interface CountryInfo {
   countryCode: string;

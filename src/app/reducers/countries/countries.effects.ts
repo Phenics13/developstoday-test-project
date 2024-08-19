@@ -9,7 +9,7 @@ import {
   loadNextCountriesHolidaysFailure,
   loadNextCountriesHolidaysSuccess,
 } from './countries.actions';
-import { catchError, delay, map, of, switchMap } from 'rxjs';
+import { catchError, map, of, switchMap } from 'rxjs';
 
 @Injectable()
 export class CountriesEffects {

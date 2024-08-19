@@ -1,6 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Country, CountryInfo } from '../../models/country.model';
-import { Holiday } from '../../models/holiday.model';
+import { Country } from '../../models/country.model';
 import { CountryNextHoliday } from '../../models/countryHoliday.model';
 
 export const loadCountries = createAction('[Countries] Load Countries');
